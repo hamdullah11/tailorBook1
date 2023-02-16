@@ -35,11 +35,12 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : '#8645FF',
   };
 
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor="gray" />
       <Route />
     </NavigationContainer>
   );
