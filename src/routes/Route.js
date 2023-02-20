@@ -1,5 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {View, Text, StatusBar} from 'react-native';
+import {View, Text, StatusBar, TouchableOpacity, Image} from 'react-native';
 
 import React from 'react';
 import Login from '../views/Login';
@@ -13,6 +13,7 @@ import AddNewOrder from '../views/AddNewOrder';
 import Gallery from '../views/Gallery';
 import {getHeaderTitle} from '@react-navigation/elements';
 import CustomHeader from '../components/CustomHeader';
+import DrawerIcon from '../../assets/DrawerIcon.png';
 const Route = () => {
   const Tab = createBottomTabNavigator();
   const Stack = createNativeStackNavigator();
@@ -26,10 +27,19 @@ const Route = () => {
             headerStyle: {
               backgroundColor: '#8645FF',
             },
+            headerTitle: <Text>hamd</Text>,
+
             headerTintColor: 'white',
             headerTitleAlign: 'center',
             headerLeft: () => {
-              return <Text>hamd</Text>;
+              return (
+                <TouchableOpacity
+                  style={{
+                    marginLeft: 10,
+                  }}>
+                  <Image source={DrawerIcon} />
+                </TouchableOpacity>
+              );
             },
           }}>
           <Tab.Screen name="orders" component={Orders} />
