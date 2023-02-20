@@ -27,7 +27,7 @@ const Route = () => {
             headerStyle: {
               backgroundColor: '#8645FF',
             },
-            headerTitle: <Text>hamd</Text>,
+            headerTitle: '',
 
             headerTintColor: 'white',
             headerTitleAlign: 'center',
